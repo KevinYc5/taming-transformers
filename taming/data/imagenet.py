@@ -134,7 +134,8 @@ class ImageNetTrain(ImageNetBase):
     def _prepare(self):
         self.random_crop = retrieve(self.config, "ImageNetTrain/random_crop",
                                     default=True)
-        cachedir = os.environ.get("XDG_CACHE_HOME", os.path.expanduser("~/.cache"))
+        # cachedir = os.environ.get("XDG_CACHE_HOME", os.path.expanduser("~/.cache"))
+        cachedir = "/home/nieshen-cx/g18_data"
         self.root = os.path.join(cachedir, "autoencoders/data", self.NAME)
         self.datadir = os.path.join(self.root, "data")
         self.txt_filelist = os.path.join(self.root, "filelist.txt")
@@ -192,7 +193,8 @@ class ImageNetValidation(ImageNetBase):
     def _prepare(self):
         self.random_crop = retrieve(self.config, "ImageNetValidation/random_crop",
                                     default=False)
-        cachedir = os.environ.get("XDG_CACHE_HOME", os.path.expanduser("~/.cache"))
+        # cachedir = os.environ.get("XDG_CACHE_HOME", os.path.expanduser("~/.cache"))
+        cachedir = "/home/nieshen-cx/g18_data"
         self.root = os.path.join(cachedir, "autoencoders/data", self.NAME)
         self.datadir = os.path.join(self.root, "data")
         self.txt_filelist = os.path.join(self.root, "filelist.txt")
