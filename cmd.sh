@@ -1,0 +1,1 @@
+python main.py --base configs/imagenet_vqgan.yaml -t True --gpus 1,

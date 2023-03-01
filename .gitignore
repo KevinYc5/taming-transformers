@@ -1,0 +1,5 @@
+logs
+encoder.pkl
+decoder.pkl
+*.pyc
+*.pth
